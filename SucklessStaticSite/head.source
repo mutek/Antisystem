@@ -1,0 +1,14 @@
+ cat << HEAD_TOP >> index.html 
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+HEAD_TOP
+
+for STYLESHEET in $(ls css)
+do
+    echo "	<link rel=\"stylesheet\" type=\"text/css\" href=\"css/$STYLESHEET\" media=\"screen\" />" >> index.html
+done
+
+cat << HEAD_BOTTOM >> index.html
+    <title>$Titolo</title>
+ 
+HEAD_BOTTOM
