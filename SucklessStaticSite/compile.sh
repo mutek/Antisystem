@@ -14,9 +14,9 @@ echo "</head>" >> index.html
 echo "<body>" >> index.html
 
 
-cat 2.1_header.html >> index.html
+cat header.source >> index.html
 
-cat 2.0_body.html >> index.html
+cat body.source >> index.html
 
 
 
