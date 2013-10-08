@@ -52,7 +52,8 @@ cat << POST >> index.html
 	<p>
 POST
 
-	cat source/$post >> index.html
+	# sostituisce tutti gli /n con dei </br>
+	cat source/$post | sed ':a;N;$!ba;s/\n/\<\/br\>/g' >> index.html
 	echo "	</p>" >> index.html
 	printf .
 done
@@ -64,10 +65,8 @@ printf .
 # Tag standard universali di chiusura documento
 echo "</body>" >> index.html
 echo "</html>" >> index.html
-
-# Sostituisci in blocco tutti gli /n con dei </br>
-sed -i ':a;N;$!ba;s/\n/\<\/br\>/g' index.html
 printf .
+echo ""
 
 # TODO
 # in futuro accettare markdown e parserizzare con un parser rocksolid se esiste altrimenti passar eil text cosi come si trova
