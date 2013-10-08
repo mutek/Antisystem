@@ -8,3 +8,7 @@ FINE. (a prova di programmatore VisualBasic su Macro Excel)
 
 p.s. appena possibile trasformo automaticamente gli <pre><code>/n</code></pre> in <pre><code>&lt;/br&gt;</code></pre> e rendo le cose più intuitive
 edit: ho fatto prima a farlo che a scrivere e rieditare questo post...
+edit: prossimo passo integrare nativamente atom.xml nella root dell'index
+todo: la prima riga del post puo essere il sottotitolo identificando quindi una struttura del tipo:
+	- Nome file -%gt; Titolo post
+	- - Prima riga post -%gt; Sottotitolo post
