@@ -53,20 +53,20 @@ cat << POST >> index.html
 POST
 
 	# un po di magia
-cat source/$post \ 
-| sed -e ':a;N;$!ba;s/\n/\<\/br\>/g' \ 
-| sed -e 's/ at / at /g' \
-| sed -e 's/[[:cntrl:]]/ /g'\
-| sed -e 's/^[[:space:]]*$//g' \
-| sed -e '/^$/{'"$NL"'N'"$NL"'/^\n$/D'"$NL"'}' \
-| sed -e 's/^$/<\/UL><P>/g' \
-| sed -e '/<P>$/{'"$NL"'N'"$NL"'s/\n//'"$NL"'}'\
-| sed -e 's/<P>[[:space:]]*"/<P><UL>"/' \
-| sed -e 's/^[[:space:]]*-/<BR> -/g' \
-| sed -e 's/http:\/\/[[:graph:]\.\/]*/<A HREF="&">[&]<\/A> /g'\	
->> index.html
+cat source/$post | sed  ':a;N;$!ba;s/\n/\<\/br\>/g' > $post.tmp
+sed -i 's/ at / at /g' $post.tmp
+sed -i 's/[[:cntrl:]]/ /g' $post.tmp
+sed -i 's/^[[:space:]]*$//g' $post.tmp 
+sed -i '/^$/{'"$NL"'N'"$NL"'/^\n$/D'"$NL"'}' $post.tmp
+sed -i 's/^$/<\/ul><p>/g' $post.tmp
+sed -i '/<p>$/{'"$NL"'N'"$NL"'s/\n//'"$NL"'}' $post.tmp
+sed -i 's/<p>[[:space:]]*"/<p><ul>"/' $post.tmp
+sed -i 's/^[[:space:]]*-/<br> -/g' $post.tmp
+sed -i 's/http:\/\/[[:graph:]\.\/]*/<a href="&">[&]<\/a> /g' $post.tmp
 
+	cat $post.tmp >> index.html
 	echo "	</p>" >> index.html
+	unlink  $post.tmp
 	printf .
 done
 

@@ -19,6 +19,6 @@ questo testo teoricamente risulterebbe come codice in base alle regole di css
 </code>
 </pre>
 
-o anche inserire link di qualche genere <a href="http://www.riseup.net">Riseup!</a>
+o anche inserire link di qualche genere http://www.riseup.net Riseup!
 
 Vediamo di inserire qualche tag magico giusto per rendere ancora piu pulito il file testo...ma poche cose...
