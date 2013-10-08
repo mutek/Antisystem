@@ -32,7 +32,7 @@ echo "</head>" >> index.html
 echo "<body>" >> index.html
 
 # Sorgente HTML della sezione HEADER
-cat model/header.source >> index.html
+. ./model/header.source
 
 # Sorgente HTML della sezione BODY la parte di testa 
 cat model/body.header.source >> index.html
