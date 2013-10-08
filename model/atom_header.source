@@ -1,0 +1,15 @@
+cat << ATOM_HEADER >> atom.xml
+
+        <title>$Titolo</title>
+        <subtitle>)_(</subtitle>
+        <link href="$Url_Atom" rel="self" />
+        <link href="$Url" />
+        <!-- id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id -->
+        <updated>$ATOM_MAIN_UPDATED</updated>
+	<author>
+	  <name>$Author_Name</name>
+	  <email>$Author_Email</email>
+	  <uri>$Url</uri>
+	</author>
+        <rights>$RIGHTS</rights>
+ATOM_HEADER

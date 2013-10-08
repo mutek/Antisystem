@@ -1,6 +1,7 @@
  cat << HEAD_TOP >> index.html 
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Feed $Titolo" />
 HEAD_TOP
 
 for STYLESHEET in $(ls css)
@@ -9,6 +10,6 @@ do
 done
 
 cat << HEAD_BOTTOM >> index.html
-    <title>$Titolo</title>
+	<title>$Titolo</title>
  
 HEAD_BOTTOM
