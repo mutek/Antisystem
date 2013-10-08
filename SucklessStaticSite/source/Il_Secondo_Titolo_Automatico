@@ -1,0 +1,10 @@
+chiaamente dopo il primo test si passa al secondo.
+
+In questo caso sto verificando che in base a questo css se continuo  scrivere cosi...risulta tutto incollato
+<p>Ma inserendo tutto in paragrafi le cose dovrebbero migliorare</p>
+
+Come dicevo prima la semplicita di questo metodo mi permette di clonare con git in locale, poi compilare con la POSIX Shell e spingere i cambiamenti in remoto.
+Non richiede framework esoterici tipo Ruby/Python/Vattelapiglianderculo...niente di tutto cio
+<p>Una semplice cartella di sorgenti testuale che vengono ricompilati in un index</p>
+Beh chiaramente pina piano che allungo il brodo comincio ad affinare...tipo far riconoscere sottocartelle per generare sezioni automatiche ed amenita del genere...
+Tutto basato sullo stile UNIX...tutto è un file...
