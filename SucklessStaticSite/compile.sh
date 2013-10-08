@@ -16,7 +16,26 @@ echo "<body>" >> index.html
 
 cat header.source >> index.html
 
-cat body.source >> index.html
+## body.builder
+cat body.header.source >> index.html
+
+for post in $(ls -c source)
+do
+
+TITOLO="$(basename $post .txt | tr '_' ' ')"
+
+cat << POST >> index.html
+        <h3>
+	<a name="$TITOLO" class="anchor" href="#$TITOLO"><span class="octicon octicon-link"></span></a>$TITOLO</h3>	
+	<p>
+POST
+
+	cat source/$post >> index.html
+	echo "	</p>" >> index.html
+
+done
+
+cat body.footer.source >> index.html
 
 
 

@@ -1,0 +1,24 @@
+Dopo anni passati a subire tutto il riciclo ecologico del software per costruire siti in automatico...ho deciso che non c'è una cosa che fa per me.
+
+Quello che fa per me è less then suckless ovvero suckless - 1
+
+Il minimalismo dopo il quale la pagina te la scrivi a mano libera...
+
+Ad esempio in questo momento sto usando nano per scrivere questo testo dentro un file il quale nome dovra risultare il titolo del post...
+Più semplice di cosi si muore...
+
+Per ulteriore semplicita il titolo del file se contiene degli underscore indica la volonta di uno spazio e rimane cosi essenziale e minimalista.
+
+Posso sfruttare l'HTML in questo post e questo verra incorporato direttamente nella index.html
+
+esempio:
+
+<pre>
+<code>
+questo testo teoricamente risulterebbe come codice in base alle regole di css
+</code>
+</pre>
+
+o anche inserire link di qualche genere <a href="http://www.riseup.net">Riseup!</a>
+
+Vediamo di inserire qualche tag magico giusto per rendere ancora piu pulito il file testo...ma poche cose...
