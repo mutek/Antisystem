@@ -62,7 +62,7 @@ sed -i 's/^$/<\/ul><p>/g' $post.tmp
 sed -i '/<p>$/{'"$NL"'N'"$NL"'s/\n//'"$NL"'}' $post.tmp
 sed -i 's/<p>[[:space:]]*"/<p><ul>"/' $post.tmp
 sed -i 's/^[[:space:]]*-/<br> -/g' $post.tmp
-sed -i 's/http:\/\/[[:graph:]\.\/]*/<a href="&">[&]<\/a> /g' $post.tmp
+sed -i 's/http:\/\/[[:graph:]\.\/]*/<a href="&">&<\/a> /g' $post.tmp
 
 	cat $post.tmp >> index.html
 	echo "	</p>" >> index.html
