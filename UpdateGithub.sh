@@ -20,12 +20,13 @@
 # 0. You just DO WHAT THE FUCK YOU WANT TO.
 #
 
-git config --global user.name "mutek"
-git config --global user.email mutek@inventati.org
+# i parametri commentati sono stati inseriti nell'hook git pre-commit
+#git config --global user.name "mutek"
+#git config --global user.email mutek@inventati.org
 
-echo "Aggiungo i cambiamenti al database locale"
-git add .
-echo "Inserisci una descrizione dei tuoi cambiamenti"
+#echo "Aggiungo i cambiamenti al database locale"
+#git add .
+#echo "Inserisci una descrizione dei tuoi cambiamenti"
 #read n
 echo "Eseguo la finalizzazione dei cambiamenti in locale"
 EPOCA_UNIX=$(date +%N)
