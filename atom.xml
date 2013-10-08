@@ -7,7 +7,7 @@
         <link href="http://mutek.github.io/Antisystem/atom.xml" rel="self" />
         <link href="http://mutek.github.io/Antisystem" />
         <!-- id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id -->
-        <updated>2013-04-08T17:04:03Z</updated>
+        <updated>2013-12-08T17:12:43Z</updated>
 	<author>
 	  <name>mutek</name>
 	  <email>mutek@riseup.net</email>
@@ -18,15 +18,14 @@
     <title>Ed Atom Fu</title>
     <link href="http://mutek.github.io/Antisystem/#Ed Atom Fu"/>
     <!-- id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id -->
-    <updated>2013-10-08T17:03:58Z</updated>
+    <updated>2013-10-08T17:12:36Z</updated>
     <summary>Preso dalla foga ho integrato un timidissimo Atom che si trova presso http://mutek.github.io/Antisystem/atom.xml da verificare meglio
 Al momento devo solo risolvere elegantemente la generazione dell'uuid che sia coerente con le aspettative senza dovermi installare uuidgen
 L'entry contiene sia il ctime del file e quindi è coerente con la pubblicazione nell'index sia il summary prelevando le prime 5 righe del post e sia il contenuto totale del post dopo essere stato parserizzato per l'index
 Gli affinamenti li delego al futuro...gia cosi è più di quanto i serve</summary>
     <content>
 
-Preso dalla foga ho integrato un timidissimo Atom che si trova presso <a href="http://mutek.github.io/Antisystem/atom.xml">http://mutek.github.io/Antisystem/atom.xml</a>  da verificare meglio</br>Al momento devo solo risolvere elegantemente la generazione dell'uuid che sia coerente con le aspettative senza dovermi installare uuidgen</br>L'entry contiene sia il ctime del file e quindi è coerente con la pubblicazione nell'index sia il summary prelevando le prime 5 righe del post e sia il contenuto totale del post dopo essere stato parserizzato per l'index</br>Gli affinamenti li delego al futuro...gia cosi è più di quanto i serve
-</content></entry>
+Preso dalla foga ho integrato un timidissimo Atom che si trova presso <a href="http://mutek.github.io/Antisystem/atom.xml">http://mutek.github.io/Antisystem/atom.xml</a>  da verificare meglio</br>Al momento devo solo risolvere elegantemente la generazione dell'uuid che sia coerente con le aspettative senza dovermi installare uuidgen</br>L'entry contiene sia il ctime del file e quindi è coerente con la pubblicazione nell'index sia il summary prelevando le prime 5 righe del post e sia il contenuto totale del post dopo essere stato parserizzato per l'index</br>Gli affinamenti li delego al futuro...gia cosi è più di quanto i serve</br></br>TODO:</br>per tutti gli altri formati taglia la testa al toro con pandoc senza girarci intorno</br>...</br>ok lo faro...</content></entry>
 <entry>
     <title>Il Primo Titolo Automatico</title>
     <link href="http://mutek.github.io/Antisystem/#Il Primo Titolo Automatico"/>

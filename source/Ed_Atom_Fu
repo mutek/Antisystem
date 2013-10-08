@@ -2,3 +2,8 @@ Preso dalla foga ho integrato un timidissimo Atom che si trova presso http://mut
 Al momento devo solo risolvere elegantemente la generazione dell'uuid che sia coerente con le aspettative senza dovermi installare uuidgen
 L'entry contiene sia il ctime del file e quindi è coerente con la pubblicazione nell'index sia il summary prelevando le prime 5 righe del post e sia il contenuto totale del post dopo essere stato parserizzato per l'index
 Gli affinamenti li delego al futuro...gia cosi è più di quanto i serve
+
+TODO:
+per tutti gli altri formati taglia la testa al toro con pandoc senza girarci intorno
+...
+ok lo faro...
