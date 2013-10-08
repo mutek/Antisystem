@@ -4,20 +4,20 @@
 
 echo "Titolo: "$Titolo
 
-cat doctype.source > index.html
+cat model/doctype.source > index.html
 
 echo "<html>" >> index.html
 echo "<head>" >> index.html
-. ./head.source
+. ./model/head.source
 echo "</head>" >> index.html
 
 echo "<body>" >> index.html
 
 
-cat header.source >> index.html
+cat model/header.source >> index.html
 
 ## body.builder
-cat body.header.source >> index.html
+cat model/body.header.source >> index.html
 
 for post in $(ls -c source)
 do
@@ -35,7 +35,7 @@ POST
 
 done
 
-cat body.footer.source >> index.html
+cat model/body.footer.source >> index.html
 
 
 
