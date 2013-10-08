@@ -52,8 +52,20 @@ cat << POST >> index.html
 	<p>
 POST
 
-	# sostituisce tutti gli /n con dei </br>
-	cat source/$post | sed ':a;N;$!ba;s/\n/\<\/br\>/g' >> index.html
+	# un po di magia
+	cat source/$post \ 
+	| sed -e ':a;N;$!ba;s/\n/\<\/br\>/g' \ 
+	| sed -e 's/ at / at /g' \
+	| sed -e 's/[[:cntrl:]]/ /g'\
+	| sed -e 's/^[[:space:]]*$//g' \
+	| sed -e '/^$/{'"$NL"'N'"$NL"'/^\n$/D'"$NL"'}' \
+	| sed -e 's/^$/<\/UL><P>/g' \
+	| sed -e '/<P>$/{'"$NL"'N'"$NL"'s/\n//'"$NL"'}'\
+	| sed -e 's/<P>[[:space:]]*"/<P><UL>"/' \
+	| sed -e 's/^[[:space:]]*-/<BR> -/g' \
+	| sed -e 's/http:\/\/[[:graph:]\.\/]*/<A HREF="&">[&]<\/A> /g'\	
+	>> index.html
+
 	echo "	</p>" >> index.html
 	printf .
 done
