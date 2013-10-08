@@ -19,24 +19,25 @@ echo "Titolo: "$Titolo
 
 # prima linea di un documento HTML che facciamo passare via http
 cat model/doctype.source > index.html
-
+printf .
 # Tag standard universali
 echo "<html>" >> index.html
 echo "<head>" >> index.html
 
 # Sorgente HTML della sezione HEAD
 . ./model/head.source
-
+printf .
 # Tag standard
 echo "</head>" >> index.html
 echo "<body>" >> index.html
 
 # Sorgente HTML della sezione HEADER
 . ./model/header.source
+printf .
 
 # Sorgente HTML della sezione BODY la parte di testa 
 cat model/body.header.source >> index.html
-
+printf .
 # Riempimento automatico dei post testuali nel BODY 
 for post in $(ls -c source)
 do
@@ -53,17 +54,20 @@ POST
 
 	cat source/$post >> index.html
 	echo "	</p>" >> index.html
-
+	printf .
 done
 
 # Sorgente HTML del BODY la parte di coda 
 cat model/body.footer.source >> index.html
-
+printf .
 
 # Tag standard universali di chiusura documento
 echo "</body>" >> index.html
 echo "</html>" >> index.html
 
+# Sostituisci in blocco tutti gli /n con dei </br>
+sed -i ':a;N;$!ba;s/\n/\<\/br\>/g' index.html
+printf .
 
 # TODO
 # in futuro accettare markdown e parserizzare con un parser rocksolid se esiste altrimenti passar eil text cosi come si trova
