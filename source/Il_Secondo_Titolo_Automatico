@@ -1,4 +1,4 @@
-chiaamente dopo il primo test si passa al secondo.
+chiaramente dopo il primo test si passa al secondo.
 
 In questo caso sto verificando che in base a questo css se continuo  scrivere cosi...risulta tutto incollato
 <p>Ma inserendo tutto in paragrafi le cose dovrebbero migliorare</p>
@@ -8,3 +8,5 @@ Non richiede framework esoterici tipo Ruby/Python/Vattelapiglianderculo...niente
 <p>Una semplice cartella di sorgenti testuale che vengono ricompilati in un index</p>
 Beh chiaramente pina piano che allungo il brodo comincio ad affinare...tipo far riconoscere sottocartelle per generare sezioni automatiche ed amenita del genere...
 Tutto basato sullo stile UNIX...tutto è un file...
+
+<p>edit: posso anche liberamente sbagliare quindi andare a modificare il mio file testo, ricompilare e poi git push vari</p>
