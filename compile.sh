@@ -8,9 +8,14 @@
 # li nei paesi dove il Public Domain risulta vago o piu restrittivo allora applicare la licenza:
 # Do What The Fuck You Want License
 # 0. Just Do What The Fuck You Want
+#
 
 EPOCA_UNIX="$(date +%s)"
 ATOM_MAIN_UPDATED="$(date +%Y-%M-%dT%H:%M:%SZ)"
+
+FILE_EXTENSION_MARKDOWN="md markdown mdown mkdn mdn mdtext"
+FILE_EXTENSION_TXT="txt"
+FILE_EXTENSION_HTML="html htm"
 
 # Legge un eventuale file di configurazione dove è possibile configurare variabili che verranno usate qua e la
 [ -f ./CONFIG ] && . ./CONFIG
@@ -53,6 +58,9 @@ ATOM_HEADER
 # Riempimento automatico dei post testuali nel BODY 
 for post in $(ls -c source)
 do
+
+## TODO
+# verifica postfix ed adeguemento
 
 # basename $post .txt significa dammi il basename di $post togliendo il postfix .txt se esiste
 # poi passa al vaglio di transalte per sostituirmi tuttel le occorrenze del carattere _ con uno spazio
