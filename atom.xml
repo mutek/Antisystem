@@ -7,13 +7,27 @@
         <link href="http://mutek.github.io/Antisystem/atom.xml" rel="self" />
         <link href="http://mutek.github.io/Antisystem" />
         <!-- id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id -->
-        <updated>2013-47-09T12:47:58Z</updated>
+        <updated>2013-20-10T12:20:12Z</updated>
 	<author>
 	  <name>mutek</name>
 	  <email>mutek@riseup.net</email>
 	  <uri>http://mutek.github.io/Antisystem</uri>
 	</author>
         <rights>(c) mutek - Public Domain</rights>
+<entry>
+    <title>TO DO</title>
+    <link href="http://mutek.github.io/Antisystem/#TO DO"/>
+    <!-- id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id -->
+    <updated>2013-10-10T12:20:06Z</updated>
+    <summary><p>un todo generico qualunque aggiornabile quandocinalmente</p>
+<ul>
+<li>PP IT: soluzione completa chiavi in mano server di posta + accesso webmail ad uso interno funzioni dei Pirati</li>
+<li><ul>
+<li><ul></summary>
+    <content>
+
+<p>un todo generico qualunque aggiornabile quandocinalmente</p></br><ul></br><li>PP IT: soluzione completa chiavi in mano server di posta + accesso webmail ad uso interno funzioni dei Pirati</li></br><li><ul></br><li><ul></br><li><ul></br><li>vps in area simpatica (Islanda?) + Debian 7 || OpenBSD + Postfix + Rouncube + amenita varie e cosmesi</li></br></ul></li></br></ul></li></br></ul></li></br><li>PP IT: aliasing email in ricezione per gestione privacy interna intra Pirati</li></br><li><ul></br><li><ul></br><li><ul></br><li>risolvere con macchina di turing in crimson e push git via ssh con chiavi in utente sandboxed</li></br></ul></li></br></ul></li></br></ul></li></br></ul>
+</content></entry>
 <entry>
     <title>Ed Atom Fu</title>
     <link href="http://mutek.github.io/Antisystem/#Ed Atom Fu"/>
