@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+#
+### esegui compila.sh prima di tutto
+
+
+# compila e produci lo statico
+./compile.sh
+wait
+
+git config --global user.name "mutek"
+git config --global user.email mutek@inventati.org
+
+echo "GIT HOOK PRE COMMIT: Aggiungo i cambiamenti al database locale"
+
+# aggiungi i cambiamenti a git
+git add .

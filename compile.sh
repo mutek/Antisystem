@@ -9,13 +9,24 @@
 # Do What The Fuck You Want License
 # 0. Just Do What The Fuck You Want
 #
-
+# piu avanti proviamo ad iniettare sed inplace direttamente nell'index lasciando la liberta di programmare la pagina con delle variabili sostitutive
+# e lasciando ancora piu integro l'html permettendo maggiore magia al designer html
+#
+# esempio di pandoc:
+# pandoc -f markdown -t html testoInput > testoOutput.html
+#
+# regoletta:
+# un file senza estensione viene trattato come testo e parserizzato dal codice interno
+# file con estensione vengono manipolati con pandoc prelevando il formato dall'estensione (.txt , .md, .html, ...) ed avendo come output HTML formattato da incorporare nello statico finale
 EPOCA_UNIX="$(date +%s)"
 ATOM_MAIN_UPDATED="$(date +%Y-%M-%dT%H:%M:%SZ)"
 
 FILE_EXTENSION_MARKDOWN="md markdown mdown mkdn mdn mdtext"
 FILE_EXTENSION_TXT="txt"
 FILE_EXTENSION_HTML="html htm"
+
+# Abemus Pandoc somewhere? Possibly maybe...probably not...possible maybe
+[  ! -z $(which pandoc) ] && PANDOC=true
 
 # Legge un eventuale file di configurazione dove è possibile configurare variabili che verranno usate qua e la
 [ -f ./CONFIG ] && . ./CONFIG
@@ -63,7 +74,7 @@ do
 # verifica postfix ed adeguemento
 
 # basename $post .txt significa dammi il basename di $post togliendo il postfix .txt se esiste
-# poi passa al vaglio di transalte per sostituirmi tuttel le occorrenze del carattere _ con uno spazio
+# poi passa al vaglio di translate per sostituirmi tutte le occorrenze del carattere _ con uno spazio
 TITOLO="$(basename $post .txt | tr '_' ' ')"
 
 cat << POST >> index.html
