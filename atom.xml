@@ -7,13 +7,27 @@
         <link href="http://mutek.github.io/Antisystem/atom.xml" rel="self" />
         <link href="http://mutek.github.io/Antisystem" />
         <!-- id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id -->
-        <updated>2013-40-15T16:40:47Z</updated>
+        <updated>2013-19-16T16:19:12Z</updated>
 	<author>
 	  <name>mutek</name>
 	  <email>mutek@riseup.net</email>
 	  <uri>http://mutek.github.io/Antisystem</uri>
 	</author>
         <rights>(c) mutek - Public Domain</rights>
+<entry>
+    <title>Post SQL</title>
+    <link href="http://mutek.github.io/Antisystem/#Post SQL"/>
+    <!-- id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id -->
+    <updated>2013-10-16T16:18:38Z</updated>
+    <summary>dal punto di vista datacentrico un post è un aggregato di informazioni multimediali caratterizzabile dai seguenti metadati
+
+post (
+uuid
+contenuto</summary>
+    <content>
+
+dal punto di vista datacentrico un post è un aggregato di informazioni multimediali caratterizzabile dai seguenti metadati</br></br>post (</br>uuid</br>contenuto</br>timestamp</br>mittente</br>destinatario</br>graph</br>sha512sum</br>)</br></br>uuid: id unico uuid basato su una generazione che comprende /dev/urandom o simili</br>contenuto: il contenuto </br>timestamp: epoca unix di generazione (identificando generazione come store nel DB)</br>mittente: tag di un mittente verificato</br>destinatario: tag di un destinatario verificato</br>graph: indirizzo della rete del thread nel formato root.ramo.ramo.ramo....foglia</br>sha512sum: sha512sum della concatenazione di tutti i campi precedenti</br></br>In pratica con la premessa che l'informazione esiste a priori, possiamo pubblicare un contenuto e strutturarlo come un oggetto autonomo e distinguibile dell'insieme degli oggetti avente poi alemno un serie di attributi</br>Gli attributi permettono di classificare l'oggetto attribuendogli caratteristiche utili ai fini della fruizione umana.</br></br>L'attributo sha512sum permette di costruire un'impronta univoca che rappresenta univocamente quella combinazione di attributi a rappresentare proprio quell'oggetto, permettendo anche di verificarne la mappatura.</br>Qualsiasi modifica ad uno dei bit della sequenza concatenata non produce quell'impronta dichiarata come ultimo attributo.</br></br>Tramite il grafo possiamo posizionare l'oggetto all'interno di una rete gerarchica e poter visualizzare in modo strutturato e fruibile l'informazione fornendo un senso al routing generato.</br>Questo effetto per avere senso deve essere mappato all'origine da parte del mittente (esempio un reply ad un post di un thread).</br></br>Il destinatario potrebbe essere la root del grafo (il main thread stesso) o un altro utente specifico (configurando ad esempio insiemi separati)</br></br>Con questa architettura siamo in grado di popolare un database ed allo stesso tempo fornire informazioni strutturate in modo variabilmente complesse che possono avere senso sia al produttore che al consumatore nello stesso momento.</br></br>prototipo rozzo pseudo SQL da implementare nel DB destinatario con la grammatica finale (i.e. PostgreSQL)</br></br><pre></br><code></br>CREATE TABLE Post </br>(uuid char(50) NOT NULL UNIQUE, </br>contenuto varchar(50) NOT NULL, </br>timestamp datetime NOT NULL, </br>mittente char(50) NOT NULL, </br>destinatario char(50), </br>grafo varchar(50) NOT NULL UNIQUE,</br>sha512sum char(50) NOT NULL UNIQUE</br>PRIMARY KEY (uuid,sha512sum));</br></code></br></pre>
+</content></entry>
 <entry>
     <title>TO DO</title>
     <link href="http://mutek.github.io/Antisystem/#TO DO"/>

@@ -1,0 +1,48 @@
+dal punto di vista datacentrico un post è un aggregato di informazioni multimediali caratterizzabile dai seguenti metadati
+
+post (
+uuid
+contenuto
+timestamp
+mittente
+destinatario
+graph
+sha512sum
+)
+
+uuid: id unico uuid basato su una generazione che comprende /dev/urandom o simili
+contenuto: il contenuto 
+timestamp: epoca unix di generazione (identificando generazione come store nel DB)
+mittente: tag di un mittente verificato
+destinatario: tag di un destinatario verificato
+graph: indirizzo della rete del thread nel formato root.ramo.ramo.ramo....foglia
+sha512sum: sha512sum della concatenazione di tutti i campi precedenti
+
+In pratica con la premessa che l'informazione esiste a priori, possiamo pubblicare un contenuto e strutturarlo come un oggetto autonomo e distinguibile dell'insieme degli oggetti avente poi alemno un serie di attributi
+Gli attributi permettono di classificare l'oggetto attribuendogli caratteristiche utili ai fini della fruizione umana.
+
+L'attributo sha512sum permette di costruire un'impronta univoca che rappresenta univocamente quella combinazione di attributi a rappresentare proprio quell'oggetto, permettendo anche di verificarne la mappatura.
+Qualsiasi modifica ad uno dei bit della sequenza concatenata non produce quell'impronta dichiarata come ultimo attributo.
+
+Tramite il grafo possiamo posizionare l'oggetto all'interno di una rete gerarchica e poter visualizzare in modo strutturato e fruibile l'informazione fornendo un senso al routing generato.
+Questo effetto per avere senso deve essere mappato all'origine da parte del mittente (esempio un reply ad un post di un thread).
+
+Il destinatario potrebbe essere la root del grafo (il main thread stesso) o un altro utente specifico (configurando ad esempio insiemi separati)
+
+Con questa architettura siamo in grado di popolare un database ed allo stesso tempo fornire informazioni strutturate in modo variabilmente complesse che possono avere senso sia al produttore che al consumatore nello stesso momento.
+
+prototipo rozzo pseudo SQL da implementare nel DB destinatario con la grammatica finale (i.e. PostgreSQL)
+
+<pre>
+<code>
+CREATE TABLE Post 
+(uuid char(50) NOT NULL UNIQUE, 
+contenuto varchar(50) NOT NULL, 
+timestamp datetime NOT NULL, 
+mittente char(50) NOT NULL, 
+destinatario char(50), 
+grafo varchar(50) NOT NULL UNIQUE,
+sha512sum char(50) NOT NULL UNIQUE
+PRIMARY KEY (uuid,sha512sum));
+</code>
+</pre>
