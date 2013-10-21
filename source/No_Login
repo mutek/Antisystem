@@ -1,0 +1,19 @@
+
+una debole procedura per accreditare una mail in un profilo di memoria
+
+1) landing page alla registrazione
+2) inserisci solo la mail
+3) apri la tua mailbox e ricevi un PIN momentaneo
+4) torna al sito ed inserisci la mail ed il PIN
+5) profilo creato ed attivo per "X" minuti soluzione risolta con la sessione
+
+futuri login post registrazione profilo
+
+1) landing page login
+2) inserisci email premi invio
+3) apri la tua mailbox ricevi il messaggio di PIN momentaneo
+4) torna alla pagina di login ed inserisci mail + pin
+5) naviga nel sito con la sessione attiva
+
+le sessioni si attivano tramite il PIN ricevuto nella mailbox registrata
+

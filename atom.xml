@@ -7,13 +7,27 @@
         <link href="http://mutek.github.io/Antisystem/atom.xml" rel="self" />
         <link href="http://mutek.github.io/Antisystem" />
         <!-- id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id -->
-        <updated>2013-19-16T16:19:12Z</updated>
+        <updated>2013-03-21T17:03:57Z</updated>
 	<author>
 	  <name>mutek</name>
 	  <email>mutek@riseup.net</email>
 	  <uri>http://mutek.github.io/Antisystem</uri>
 	</author>
         <rights>(c) mutek - Public Domain</rights>
+<entry>
+    <title>No Login</title>
+    <link href="http://mutek.github.io/Antisystem/#No Login"/>
+    <!-- id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id -->
+    <updated>2013-10-21T17:03:12Z</updated>
+    <summary>
+una debole procedura per accreditare una mail in un profilo di memoria
+
+1) landing page alla registrazione
+2) inserisci solo la mail</summary>
+    <content>
+
+</br>una debole procedura per accreditare una mail in un profilo di memoria</br></br>1) landing page alla registrazione</br>2) inserisci solo la mail</br>3) apri la tua mailbox e ricevi un PIN momentaneo</br>4) torna al sito ed inserisci la mail ed il PIN</br>5) profilo creato ed attivo per "X" minuti soluzione risolta con la sessione</br></br>futuri login post registrazione profilo</br></br>1) landing page login</br>2) inserisci email premi invio</br>3) apri la tua mailbox ricevi il messaggio di PIN momentaneo</br>4) torna alla pagina di login ed inserisci mail + pin</br>5) naviga nel sito con la sessione attiva</br></br>le sessioni si attivano tramite il PIN ricevuto nella mailbox registrata</br>
+</content></entry>
 <entry>
     <title>Post SQL</title>
     <link href="http://mutek.github.io/Antisystem/#Post SQL"/>
